@@ -207,6 +207,7 @@ fieldset{
 label{
     margin-bottom: 1rem;
 }
+
 .form-item input {
     border: rgb(0, 0, 0, 0.3) 1px solid;
     padding: 0.5rem;
@@ -231,7 +232,6 @@ input:not([type="submit"]):hover{
     background-color:var(--primary-blue-color);
     transition: background-color .3s ease-out;
     transition: color .3s ease-out;
-
 }
 
 .submit input:hover{
