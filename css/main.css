@@ -1,0 +1,364 @@
+/******************************************** 
+* GLOBAL STYLES & VARIABLES
+*********************************************/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400');
+
+html {
+    box-sizing: border-box;  
+    font-size: 100%; /* 16px */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --dark-blue-hue: blue;
+    --light-blue-hue: lightblue;
+
+    --primary-blue-color: rgb(25, 35, 49);
+    --secondary-orange-yellow-color: rgb(237, 170, 75);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/******************************************** 
+* UTILITY CLASSES
+*********************************************/
+.white-font {
+    color: white;
+}
+
+.caps-lock {
+    text-transform: uppercase;
+}
+
+/******************************************** 
+* MOBILE TYPE-SCALE
+*********************************************/
+body {
+    background: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000000;
+}
+
+p {margin-bottom: 1rem;}
+
+h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.488rem;
+}
+
+h2 {font-size: 2.074rem;}
+
+h3 {font-size: 1.728rem;}
+
+h4 {font-size: 1.44rem;}
+
+h5 {font-size: 1.2rem;}
+
+small, .text_small {font-size: 0.833rem;}
+
+/******************************************** 
+* CONTAINERS
+*********************************************/
+.container {
+    width: 100%;
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.text-container {
+    width: 100%;
+    max-width: 45em;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 40em;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.banner {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #0009, #0001), linear-gradient(to bottom, rgb(80, 40, 30), var(--secondary-orange-yellow-color), black);
+}
+
+/******************************************** 
+* TOP NAVIGATION
+*********************************************/
+.bar {
+    background-color: var(--primary-blue-color);
+}
+
+.mast-nav {
+    width: 100%;
+}
+
+.mast-nav-list{
+    padding: 1rem 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+header .mast-nav-list a{
+        text-decoration: none;
+        color: white;
+}
+
+.mast-nav-item {
+    font-size: 1.5rem;
+}
+
+.mast-nav-item:hover {
+    color: var(--secondary-orange-yellow-color);
+    text-decoration: underline;
+}
+
+/******************************************** 
+* BOTTOM NAVIGATION
+*********************************************/
+footer .mast-nav-list a{
+    color: white;
+}
+
+footer .mast-nav-list {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-nav-item:hover {
+    color: var(--secondary-orange-yellow-color);
+}
+
+/******************************************** 
+* SVG - COMPANY LOGO
+*********************************************/
+.icon {
+    /* padding-top: 0.75rem; */
+    display: flex;
+    align-items: center;
+    width: 8em;
+}
+
+.icon-list {
+    display: flex;
+    width: 8em;
+    /* height: 6em; */
+}
+
+/******************************************** 
+* GRID FORM
+*********************************************/
+fieldset{
+    display: contents;
+}
+
+.sign-up-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: 10px 10px 2px 2px rgba(0, 0, 0, .2);
+}
+
+label{
+    margin-bottom: 1rem;
+}
+.form-item input {
+    border: rgb(0, 0, 0, 0.3) 1px solid;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.25rem;
+}
+.form-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input:not([type="submit"]):focus,
+input:not([type="submit"]):hover{
+    border: var(--dark-blue-hue) 1px solid;
+    background-color: var(--light-blue-hue);
+}
+
+.submit input {
+    width: 8em;
+    color:white;
+    background-color:var(--primary-blue-color);
+    transition: background-color .3s ease-out;
+    transition: color .3s ease-out;
+
+}
+
+.submit input:hover{
+    color: black;
+    background-color: var(--secondary-orange-yellow-color);
+
+}
+
+/******************************************** 
+* ACCESSIBILITY
+*********************************************/
+.screen-reader-text {
+    position: absolute;
+    width: 0.5px;
+    height: 0.5px;
+    overflow: hidden;
+}
+
+.skip-links {
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+
+.skip-links a{
+    position: absolute;
+    top: -100rem;
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    color: white;
+    border-radius: 0 0 .5rem .5rem;
+    text-decoration: none;
+    background-color: green;
+    z-index: 9000;
+}
+
+.skip-links a:focus {
+    top:0;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 0;
+    right: 1rem;
+    background-color: green;
+    padding: 1rem 0.5rem;
+    color: white;   
+    border-radius: .5rem .5rem 0 0;
+    text-decoration: none;
+}
+
+*:focus {
+    outline: .125rem solid rgb(62, 65, 255);
+    outline-offset: 0.25rem;    
+}
+
+/******************************************** 
+* TABLET MEDIA QUERY
+*********************************************/
+
+@media only screen and (min-width: 45em) {
+
+/******************************************** 
+* MEDIUM & DESKTOP TYPE-SCALE
+*********************************************/
+
+    body {
+        background: white;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        line-height: 1.75;
+        color: #000000;
+    }
+    
+    p {margin-bottom: 1rem;}
+    
+    h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    line-height: 1.3;
+    }
+    
+    h1 {
+    margin-top: 0;
+    font-size: 4.209rem;
+    }
+    
+    h2 {font-size: 3.157rem;}
+    
+    h3 {font-size: 2.369rem;}
+    
+    h4 {font-size: 1.777rem;}
+    
+    h5 {font-size: 1.333rem;}
+    
+    small, .text_small {font-size: 0.75rem;}
+/**********************************************/
+
+
+    .banner p {
+        font-size: 1.5rem;
+    }
+
+    .mast-nav-list{
+        flex-direction: row;
+        justify-content:end;
+        gap: 4rem;
+        
+    }
+
+    .justify-start {
+        margin-right: auto;
+    }
+
+    .sign-up-grid {
+        min-height: 63vh;
+    }
+
+}
+
+/******************************************** 
+* DESKTOP MEDIA QUERY
+*********************************************/
+
+@media only screen and (min-width: 60em) {
+    .container{
+        padding:0
+    }
+}
